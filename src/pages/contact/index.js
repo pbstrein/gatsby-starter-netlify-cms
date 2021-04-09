@@ -21,7 +21,7 @@ export default class Index extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const form = e.target
-    fetch('/', {
+    fetch('/?no-cache=1', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
@@ -42,7 +42,7 @@ export default class Index extends React.Component {
               <h1>Contact</h1>
               <form
                 name="contact"
-                method="post"
+                method="POST"
                 action="/contact/thanks/"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
